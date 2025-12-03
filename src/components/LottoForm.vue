@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async getPrediction() {
-      const res = await axios.post('https://your-backend-url.onrender.com/predict', { last_draw: this.lastDraw, user_numbers: this.userNumbers })
+      const res = await axios.post('https://lotto-backend-mwts.onrender.com/predict', { last_draw: this.lastDraw, user_numbers: this.userNumbers })
       this.top5 = res.data.top5_per_slot
       this.sets = res.data.predicted_sets
       (window.adsbygoogle = window.adsbygoogle || []).push({})
